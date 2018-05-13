@@ -10,20 +10,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="78b2f908-1a3a-415e-9d01-ab569d9ac194" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/olhahn/agreementApp/dao/AbstructDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/olhahn/agreementApp/dao/AbstructDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/olhahn/agreementApp/dao/AbstructDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/olhahn/agreementApp/dao/AbstructDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/olhahn/agreementApp/dao/AgreementDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/olhahn/agreementApp/dao/AgreementDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/olhahn/agreementApp/dao/SystemDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/olhahn/agreementApp/dao/SystemDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/olhahn/agreementApp/dao/SystemDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/olhahn/agreementApp/dao/SystemDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/olhahn/agreementApp/service/AbstructService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/olhahn/agreementApp/service/AbstructService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/olhahn/agreementApp/service/AgreementService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/olhahn/agreementApp/service/AgreementService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/olhahn/agreementApp/service/AgreementServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/olhahn/agreementApp/service/AgreementServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/olhahn/agreementApp/service/SystemService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/olhahn/agreementApp/service/SystemService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/olhahn/agreementApp/service/SystemServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/olhahn/agreementApp/service/SystemServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/olhahn/agreementApp/test/SystemDaoImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/olhahn/agreementApp/test/SystemDaoImplTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/olhahn/agreementApp/test/SystemDaoImplTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/olhahn/agreementApp/test/SystemDaoImplTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/olhahn/agreementApp/controller/SystemController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/olhahn/agreementApp/controller/SystemController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/agreement-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/agreement-1.0-SNAPSHOT.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -48,8 +41,8 @@
       <file leaf-file-name="AgreementServiceImpl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/olhahn/agreementApp/service/AgreementServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="3" selection-start-line="10" selection-start-column="3" selection-end-line="11" selection-end-column="33" />
+            <state relative-caret-position="210">
+              <caret line="14" selection-start-line="14" selection-end-line="14" selection-end-column="8" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -69,14 +62,53 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AgreementDaoImpl.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="AgreementDaoImpl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/olhahn/agreementApp/dao/AgreementDaoImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="836">
+            <state relative-caret-position="-214">
               <caret line="58" column="24" selection-start-line="58" selection-start-column="24" selection-end-line="58" selection-end-column="24" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FileReader.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/olhahn/agreementApp/service/FileReader.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="18" column="30" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FileReaderImpl.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/olhahn/agreementApp/service/FileReaderImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="191">
+              <caret line="60" column="4" selection-start-line="60" selection-start-column="4" selection-end-line="60" selection-end-column="4" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SystemController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/olhahn/agreementApp/controller/SystemController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="297">
+              <caret line="48" column="47" lean-forward="true" selection-start-line="48" selection-start-column="47" selection-end-line="48" selection-end-column="47" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="709">
+              <caret line="176" column="27" selection-start-line="176" selection-start-column="27" selection-end-line="176" selection-end-column="27" />
             </state>
           </provider>
         </entry>
@@ -87,13 +119,13 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="spring-beans.schema" />
-        <option value="Interface" />
         <option value="jsf" />
         <option value="Jsp File" />
         <option value="JavaScript File" />
         <option value="CSS File" />
-        <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -120,8 +152,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/webapp/static/css/app.css" />
-        <option value="$PROJECT_DIR$/src/main/java/com/olhahn/agreementApp/config/AppInitializer.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/spring-servlet.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/resources/appCss.css" />
         <option value="$PROJECT_DIR$/src/main/java/com/olhahn/agreementApp/config/ApplicationInitializer.java" />
@@ -154,12 +184,10 @@
         <option value="$PROJECT_DIR$/src/main/java/com/olhahn/agreementApp/controller/AllAgreementsController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/olhahn/agreementApp/controller/AgreementsController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/bodyfragments/systems.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/olhahn/agreementApp/controller/SystemController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/bodyfragments/aboutApp.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/olhahn/agreementApp/model/SystemEntity.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/olhahn/agreementApp/model/AgreementEntity.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/olhahn/agreementApp/dao/AgreementDao.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/test/java/com/olhahn/agreementApp/test/SystemDaoImplTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/olhahn/agreementApp/service/AgreementService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/olhahn/agreementApp/dao/AbstructDao.java" />
@@ -171,6 +199,10 @@
         <option value="$PROJECT_DIR$/src/main/java/com/olhahn/agreementApp/dao/SystemDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/olhahn/agreementApp/service/SystemServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/olhahn/agreementApp/dao/AgreementDaoImpl.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/olhahn/agreementApp/service/FileReader.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/olhahn/agreementApp/controller/SystemController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/olhahn/agreementApp/service/FileReaderImpl.java" />
       </list>
     </option>
   </component>
@@ -270,7 +302,7 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="agreementApp" type="462c0819:PsiDirectoryNode" />
-              <item name="dao" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="agreement" type="b2602c69:ProjectViewProjectNode" />
@@ -549,7 +581,7 @@
       <workItem from="1525730038145" duration="3574000" />
       <workItem from="1525939513862" duration="22000" />
       <workItem from="1526143947149" duration="6659000" />
-      <workItem from="1526202613168" duration="8822000" />
+      <workItem from="1526202613168" duration="17573000" />
     </task>
     <servers />
   </component>
@@ -565,7 +597,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="176093000" />
+    <option name="totallyTimeSpent" value="184844000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -588,12 +620,12 @@
       <window_info anchor="bottom" id="Database Changes" order="14" show_stripe_button="false" />
       <window_info id="Capture Tool" order="7" />
       <window_info id="Designer" order="2" />
-      <window_info anchor="bottom" id="Inspection Results" order="17" visible="true" weight="0.4759036" />
+      <window_info anchor="bottom" id="Inspection Results" order="17" weight="0.4759036" />
       <window_info anchor="right" id="Database" order="5" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="4" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.36336336" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.36295182" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32882884" />
       <window_info anchor="bottom" id="Messages" order="12" weight="0.26355422" />
       <window_info anchor="right" id="Palette&#9;" order="6" />
@@ -605,7 +637,7 @@
       <window_info anchor="bottom" id="Spring" order="10" />
       <window_info anchor="bottom" id="CheckStyle" order="9" weight="0.47447446" />
       <window_info anchor="bottom" id="Terminal" order="11" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.35511145" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.26133743" />
       <window_info id="Web" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="right" id="Theme Preview" order="7" />
@@ -632,7 +664,7 @@
       <window_info anchor="bottom" id="Terminal" order="11" />
       <window_info id="Capture Tool" order="7" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="bottom" id="Inspection Results" order="17" visible="true" weight="0.4759036" />
+      <window_info anchor="bottom" id="Inspection Results" order="17" weight="0.4759036" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="CheckStyle" order="9" weight="0.47447446" />
       <window_info anchor="bottom" id="Event Log" order="16" side_tool="true" weight="0.2942943" />
@@ -644,7 +676,7 @@
       <window_info anchor="bottom" id="Version Control" order="15" />
       <window_info anchor="right" id="Maven Projects" order="8" sideWeight="0.49888143" weight="0.22905457" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.35511145" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26133743" />
       <window_info anchor="right" id="Database" order="5" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info id="Web" order="6" side_tool="true" />
@@ -653,7 +685,7 @@
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Coverage" order="9" sideWeight="0.50111854" side_tool="true" weight="0.33897004" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.36336336" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.36295182" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -664,12 +696,10 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="296" />
+      <option name="time" value="342" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/basefragments/css/header.css" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/olhahn/agreementApp/config/ApplicationInitializer.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/olhahn/agreementApp/config/ApplicationContexConfig.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="600">
@@ -841,13 +871,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/olhahn/agreementApp/controller/SystemController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="49" selection-start-line="49" selection-end-line="49" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/bodyfragments/aboutApp.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
@@ -910,13 +933,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="358">
-          <caret line="174" column="21" selection-start-line="174" selection-start-column="21" selection-end-line="174" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/olhahn/agreementApp/test/SystemDaoImplTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
@@ -966,16 +982,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/olhahn/agreementApp/service/AgreementServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="3" selection-start-line="10" selection-start-column="3" selection-end-line="11" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/olhahn/agreementApp/dao/SystemDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -1005,8 +1011,49 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/olhahn/agreementApp/dao/AgreementDaoImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="836">
+        <state relative-caret-position="-214">
           <caret line="58" column="24" selection-start-line="58" selection-start-column="24" selection-end-line="58" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/olhahn/agreementApp/service/AgreementServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" selection-start-line="14" selection-end-line="14" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="709">
+          <caret line="176" column="27" selection-start-line="176" selection-start-column="27" selection-end-line="176" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/olhahn/agreementApp/service/FileReader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="18" column="30" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/olhahn/agreementApp/controller/SystemController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="48" column="47" lean-forward="true" selection-start-line="48" selection-start-column="47" selection-end-line="48" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/olhahn/agreementApp/service/FileReaderImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="191">
+          <caret line="60" column="4" selection-start-line="60" selection-start-column="4" selection-end-line="60" selection-end-column="4" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

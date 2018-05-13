@@ -10,12 +10,14 @@ com/olhahn/agreementApp/service/SystemServiceImpl.class
 com/olhahn/agreementApp/service/AbstructService.class
 com/olhahn/agreementApp/service/SystemService.class
 com/olhahn/agreementApp/controller/AllAgreementsController.class
+com/olhahn/agreementApp/service/FileReaderImpl.class
 com/olhahn/agreementApp/dao/SystemDao.class
 com/olhahn/agreementApp/controller/SystemController.class
 com/olhahn/agreementApp/model/AgreementEntity.class
 com/olhahn/agreementApp/dao/AbstructDao.class
 com/olhahn/agreementApp/controller/ActiveAgreementsController.class
 com/olhahn/agreementApp/dao/AbstructDaoImpl.class
+com/olhahn/agreementApp/service/FileReader.class
 com/olhahn/agreementApp/controller/AboutAppController.class
 com/olhahn/agreementApp/controller/AgreementsController.class
 com/olhahn/agreementApp/dao/AgreementDao.class

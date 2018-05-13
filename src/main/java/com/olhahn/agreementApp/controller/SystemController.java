@@ -1,6 +1,7 @@
 package com.olhahn.agreementApp.controller;
 
 import com.olhahn.agreementApp.model.SystemEntity;
+import com.olhahn.agreementApp.service.FileReader;
 import com.olhahn.agreementApp.service.SystemService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -27,12 +28,24 @@ public class SystemController {
         this.systemService = systemService;
     }
 
+    @Autowired
+    FileReader fileReader;
+
+    public void setFileReader(FileReader fileReaderIn) {
+        this.fileReader = fileReaderIn;
+    }
+
     /**
      *
      * @return view for page "Systemy"
      */
     @RequestMapping(value="/systemsPage")
-    public ModelAndView activeAgreementsPage() {
+    public ModelAndView activeAgreementsPage() throws Exception{
+        try {
+            fileReader.readSystemFile("/home/olga/3_year/work/agreement/Skoroszyt.xlsx");
+        }catch (Exception e){
+            throw e;
+        }
         return new ModelAndView("systemsPage");
     }
 

@@ -1,5 +1,7 @@
 /home/olga/3_year/work/agreement/src/main/java/com/olhahn/agreementApp/service/AgreementServiceImpl.java
 /home/olga/3_year/work/agreement/src/main/java/com/olhahn/agreementApp/service/AgreementService.java
+/home/olga/3_year/work/agreement/src/main/java/com/olhahn/agreementApp/service/FileReader.java
+/home/olga/3_year/work/agreement/src/main/java/com/olhahn/agreementApp/service/FileReaderImpl.java
 /home/olga/3_year/work/agreement/src/main/java/com/olhahn/agreementApp/controller/AboutAppController.java
 /home/olga/3_year/work/agreement/src/main/java/com/olhahn/agreementApp/dao/AgreementDao.java
 /home/olga/3_year/work/agreement/src/main/java/com/olhahn/agreementApp/model/SystemEntity.java
