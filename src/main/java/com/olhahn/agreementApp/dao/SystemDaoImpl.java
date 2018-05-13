@@ -40,8 +40,7 @@ public class SystemDaoImpl extends AbstructDaoImpl<SystemEntity>
         try {
             tx = session.beginTransaction();
 
-            Query query = session.getNamedQuery("findByName");
-            query.setParameter("name", name);
+            Query query = session.getNamedQuery("findByName").setParameter("name", name);
             @SuppressWarnings("unchecked")
             SystemEntity system = (SystemEntity) query.getSingleResult();
             tx.commit();

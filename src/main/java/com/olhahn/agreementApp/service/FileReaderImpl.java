@@ -1,5 +1,6 @@
 package com.olhahn.agreementApp.service;
 
+import com.olhahn.agreementApp.model.AgreementEntity;
 import com.olhahn.agreementApp.model.SystemEntity;
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.apache.poi.ss.usermodel.*;
@@ -8,6 +9,10 @@ import org.springframework.stereotype.Service;
 
 import java.io.File;
 import java.io.IOException;
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 /**
  * Project: agreement.
@@ -51,15 +56,33 @@ public class FileReaderImpl implements FileReader {
     private static final int SYSTEM_ARRAY_SIZE = 3;
 
     /**
-     * Array of column indexes in file to read from into database.
-     * [1] = name
-     * [2] = description
-     * [3] = owner
+     * Array of column indexes in file.
+     * [0] = name
+     * [1] = description
+     * [2] = owner
      */
     private final int[] systemIn = new int[SYSTEM_ARRAY_SIZE];
 
-    
+    /**
+     * Size of agreement index array.
+     */
+    private static final int AGREEMENT_ARRAY_SIZE = 10;
 
+    /**
+     * Array of column indexes in file.
+     * [0] - order_number, [1] - date_from, [2] - to_date
+     * [3] - amount, [4] - amount_type, [5] - amount_period
+     * [6] - authorization_percent, [7] - active, [8] - request
+     * [9] - system
+     */
+    private final int[] agreementIn = new int[AGREEMENT_ARRAY_SIZE];
+
+    /**
+     * List of possible columns in agreement's table
+     */
+    private final String[] areementColumns = {"order_number", "date_from", "to_date",
+                "amount", "amount_type", "amount_period", "authorization_percent", "active",
+                "request", "system"};
     /**
      * Function to read from excel
      * file and insert into system table.
@@ -69,7 +92,6 @@ public class FileReaderImpl implements FileReader {
      */
     public void readSystemFile(final String input) throws IOException, InvalidFormatException {
         File file = new File(input);
-        Boolean exist = file.exists();
         Workbook workbook = WorkbookFactory.create(file);
         for (Sheet sheet: workbook) {
             // if all necessary columns are present
@@ -118,9 +140,55 @@ public class FileReaderImpl implements FileReader {
      * Function to read from excel
      * file and insert into agreement table.
      * @param input - name of the file to read from
+     * @throws IOException - when file from input does not exist
+     * @throws InvalidFormatException - when file from input is not in proper format
      */
-    public void readAgreementFile(final String input) {
-
+    public void readAgreementFile(final String input) throws IOException, InvalidFormatException {
+        File file = new File(input);
+        Workbook workbook = WorkbookFactory.create(file);
+        for (Sheet sheet: workbook) {
+            // if all necessary columns are present
+            if (setIndexesAgreement(sheet)) {
+                // iterate through all rows
+                for (int i = 1; i <= sheet.getLastRowNum(); i++) {
+                    try {
+                        Row row = sheet.getRow(i);
+                        if (allNotNullAgreement(row)) {
+                            /*
+                             *
+                             * [0] - order_number, [1] - date_from, [2] - to_date
+                             * [3] - amount, [4] - amount_type, [5] - amount_period
+                             * [6] - authorization_percent, [7] - active, [8] - request
+                             * [9] - system
+                             *
+                             */
+                            AgreementEntity agreementEntity = new AgreementEntity();
+                            agreementEntity.setNumber((int) row.getCell(agreementIn[0]).getNumericCellValue());
+                            agreementEntity.setDateFrom(row.getCell(agreementIn[1]).getDateCellValue());
+                            agreementEntity.setDateTo(row.getCell(agreementIn[2]).getDateCellValue());
+                            agreementEntity.setAmount((float) row.getCell(agreementIn[3]).getNumericCellValue());
+                            agreementEntity.setAmountType(row.getCell(agreementIn[4]).getStringCellValue());
+                            agreementEntity.setPeriod(row.getCell(agreementIn[5]).getStringCellValue());
+                            agreementEntity.setActive(Boolean.valueOf(row.getCell(agreementIn[7]).getStringCellValue()));
+                            agreementEntity.setRequest((int) row.getCell(agreementIn[8]).getNumericCellValue());
+                            String systemName = row.getCell(agreementIn[9]).getStringCellValue();
+                            SystemEntity systemEntity = systemService.getSystemByName(systemName);
+                            if (systemEntity == null) {
+                                continue;
+                            }
+                            agreementEntity.setSystem(systemEntity);
+                            Cell percentCell = row.getCell(agreementIn[6]);
+                            if (percentCell != null) {
+                                agreementEntity.setPercent((float) percentCell.getNumericCellValue());
+                            }
+                            agreementService.addObject(agreementEntity);
+                        }
+                    } catch (IllegalStateException ignored) {
+                    }
+                }
+            }
+        }
+        workbook.close();
     }
 
     /**
@@ -165,5 +233,63 @@ public class FileReaderImpl implements FileReader {
             }
         }
         return systemIn[0] != -1 && systemIn[2] != -1;
+    }
+
+    /**
+     * Sets indexes of columns in file into agreementIn array.
+     * @param sheet - sheet from each indexes should be set
+     * @return if all needed columns are in sheet
+     */
+    private boolean setIndexesAgreement(final Sheet sheet) {
+        // Set all indexes to undefined
+        for (int i = 0; i < AGREEMENT_ARRAY_SIZE; i++) {
+            agreementIn[i] = -1;
+        }
+        Row row = sheet.getRow(0);
+        for (int i = 0; i < row.getLastCellNum(); i++) {
+            Cell cell = row.getCell(i);
+            if (cell != null) {
+                try {
+                    String name = cell.getStringCellValue();
+                    /*
+                     * If name = name of one of the columns in DB,
+                     * then set the index, if index was already set
+                     * - return false, is not unequivocal
+                     * */
+                    for (int j = 0; j < AGREEMENT_ARRAY_SIZE; j++) {
+                        if (name.equals(areementColumns[j])) {
+                            if (agreementIn[j] == -1) {
+                                agreementIn[j] = i;
+                            } else {
+                                return false;
+                            }
+                        }
+                    }
+                } catch (IllegalStateException ignored) {
+                }
+            }
+        }
+        for (int i = 0; i < AGREEMENT_ARRAY_SIZE; i++) {
+            if (i != 6 && agreementIn[i] == -1) { // only authorization_percent (6) can be null
+                return false;
+            }
+        }
+        return true;
+    }
+
+    /**
+     * Checks if all necessary fields have values in raw from argument.
+     * @param row - row to check
+     * @return true if all necessary fields have values
+     */
+    private boolean allNotNullAgreement(final Row row) {
+        for (int j = 0; j < AGREEMENT_ARRAY_SIZE; j++) {
+            //if field is not percent field (it allows null)
+            // and is null - return false;
+            if (j != 6 && row.getCell(agreementIn[j]) == null) {
+                return false;
+            }
+        }
+        return true;
     }
 }

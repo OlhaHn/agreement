@@ -12,16 +12,16 @@ import java.io.IOException;
 public interface FileReader {
 
     /**
-     * Function to read from exel
+     * Function to read from excel
      * file and insert into system table.
      * @param input - name of the file to read from
      */
     void readSystemFile(String input) throws IOException, InvalidFormatException;
 
     /**
-     * Function to read from exel
+     * Function to read from excel
      * file and insert into agreement table.
      * @param input - name of the file to read from
      */
-    void readAgreementFile(String input);
+    void readAgreementFile(String input) throws IOException, InvalidFormatException;
 }
