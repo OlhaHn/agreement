@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+        "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+        "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+
+    <!-- Base Define -->
+    <definition name="base.definition" template="/WEB-INF/layouts/classic.jsp">
+        <put-attribute name="title" value="" />
+        <put-attribute name="header" value="/WEB-INF/basefragments/header.jsp" />
+        <put-attribute name="menu" value="/WEB-INF/basefragments/menu.jsp" />
+        <put-attribute name="body" value="" />
+        <put-attribute name="footer" value="/WEB-INF/basefragments/footer.jsp" />
+
+    </definition>
+
+    <!-- Main Page -->
+    <definition name="homePage" extends="base.definition">
+        <put-attribute name="title" value="Strona główna" />
+        <put-attribute name="body" value="/WEB-INF/bodyfragments/home.jsp" />
+    </definition>
+
+    <!-- Active agreements Page -->
+    <definition name="agreementsActive" extends="base.definition">
+        <put-attribute name="title" value="Umowy aktywne"/>
+        <put-attribute name="body" value="/WEB-INF/bodyfragments/agreements.jsp" />
+    </definition>
+
+    <!-- All agreements Page -->
+    <definition name="agreementsAll" extends="base.definition">
+        <put-attribute name="title" value="Wszystkie umowy"/>
+        <put-attribute name="body" value="/WEB-INF/bodyfragments/agreements.jsp" />
+    </definition>
+
+    <!-- Passive agreements Page -->
+    <definition name="agreementsNonActive" extends="base.definition">
+        <put-attribute name="title" value="Nieaktywne umowy"/>
+        <put-attribute name="body" value="/WEB-INF/bodyfragments/agreements.jsp" />
+    </definition>
+
+    <!-- Systems Page -->
+    <definition name="systemsPage" extends="base.definition">
+        <put-attribute name="title" value="Systemy" />
+        <put-attribute name="body" value="/WEB-INF/bodyfragments/systems.jsp" />
+    </definition>
+
+    <!-- About Page -->
+    <definition name="aboutApp" extends="base.definition">
+        <put-attribute name="title" value="O aplikacji" />
+        <put-attribute name="body" value="/WEB-INF/bodyfragments/aboutApp.jsp" />
+    </definition>
+
+</tiles-definitions>
