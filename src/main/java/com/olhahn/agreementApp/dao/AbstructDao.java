@@ -20,25 +20,28 @@ public interface AbstructDao<T> {
     /**
      * Removes object from DB.
      * @param id of the object
+     * @return true if removed, false otherwise
      */
-    void removeObject(int id);
+    boolean removeObject(int id);
 
     /**
      * Finds object by id in DB.
      * @param id - id of the object to find.
-     * @return object with that id
+     * @return object with that id, null if does not exist
      */
     T findObjectById(int id);
 
     /**
      * Updates object in DB.
      * @param input object to update
+     * @return true if updated, false if could not
      */
-    void updateObject(T input);
+    boolean updateObject(T input);
 
     /**
      * Adds object into DB.
      * @param input object to add
+     * @return true if added, false if could not
      */
-    void addObject(T input);
+    boolean addObject(T input);
 }

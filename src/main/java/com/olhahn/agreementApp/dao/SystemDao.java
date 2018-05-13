@@ -16,5 +16,5 @@ public interface SystemDao extends AbstructDao<SystemEntity> {
      * @param name - name of the system
      * @return system
      */
-    List<SystemEntity> getSystemByName(String name);
+    SystemEntity getSystemByName(String name);
 }

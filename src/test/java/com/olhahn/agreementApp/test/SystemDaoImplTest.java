@@ -19,7 +19,7 @@ class SystemDaoImplTest {
 
     @BeforeAll
     private void setSessionFactory(){
-        
+
     }
 
     @Test

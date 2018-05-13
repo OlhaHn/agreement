@@ -56,7 +56,7 @@ public class AgreementDaoImpl extends AbstructDaoImpl<AgreementEntity>
             if (tx != null) {
                 tx.rollback();
             }
-            return null; //TODO throw exception
+            return null;
         } finally {
             session.close();
         }
@@ -83,7 +83,7 @@ public class AgreementDaoImpl extends AbstructDaoImpl<AgreementEntity>
             if (tx != null) {
                 tx.rollback();
             }
-            return null; //TODO throw exception
+            return null;
         } finally {
             session.close();
         }

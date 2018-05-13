@@ -8,70 +8,78 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 /**
+ * Project: agreement.
+ * @author Olha Hnatiuk on 5/3/18
  * Implementation of SystemService interface.
  */
 @Service
 public class SystemServiceImpl implements SystemService {
 
+    /**
+     * Dao for sysyem.
+     */
     @Autowired
     private SystemDao systemDao;
 
     /**
      * Setter for systemDao field.
-     * @param systemDao
+     * @param systemDaoIn - new value for the field
      */
-    public void setSystemDao(SystemDao systemDao) {
-        this.systemDao = systemDao;
+    public void setSystemDao(final SystemDao systemDaoIn) {
+        this.systemDao = systemDaoIn;
     }
 
     /**
-     *
-     * @return list of all systems
+     * Function to get all systems.
+     * @return list of all systems,
+     * null if something went wrong
      */
     public List<SystemEntity> getAll() {
         return this.systemDao.getAll();
     }
 
     /**
-     * removes object from DB
-     * @param id
+     * Removes system from DB.
+     * @param id - id of the system to remove
+     * @return true if removed, false if something went wrong
      */
-    public void removeObject(int id) {
-        this.systemDao.removeObject(id);
+    public boolean removeObject(final int id) {
+        return this.systemDao.removeObject(id);
     }
 
     /**
-     *
-     * @param id
+     * Function to find system by id.
+     * @param id - id of the system to find.
      * @return object from DB with id as in parameter
      */
-    public SystemEntity findObjectById(int id) {
+    public SystemEntity findObjectById(final int id) {
         return this.systemDao.findObjectById(id);
     }
 
     /**
-     * updates object in DB
-     * @param input
+     * Updates object in DB.
+     * @param input - system to update.
+     * @return true if updated, false if something went wrong.
      */
-    public void updateObject(SystemEntity input) {
-        this.systemDao.updateObject(input);
+    public boolean updateObject(final SystemEntity input) {
+        return this.systemDao.updateObject(input);
     }
 
     /**
-     * adds object into DB
-     * @param input
+     * Adds object into DB.
+     * @param input - object to add
+     * @return true if added, false if something went wrong.
      */
-    public void addObject(SystemEntity input) {
-        this.systemDao.addObject(input);
+    public boolean addObject(final SystemEntity input) {
+        return this.systemDao.addObject(input);
     }
 
     /**
-     *
+     * Finds system by it's name.
      * @param name of system to find
      * @return system entity, if system with such name is in db, null otherwise
      */
-    public SystemEntity getSystemByName(String name) {
-        List<SystemEntity> list = this.systemDao.getSystemByName(name);
-        return list.isEmpty() ? null : list.get(0);
+    public SystemEntity getSystemByName(final String name) {
+        return this.systemDao.getSystemByName(name);
     }
 }

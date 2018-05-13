@@ -32,9 +32,9 @@ public class SystemDaoImpl extends AbstructDaoImpl<SystemEntity>
     /**
      * Find System with name from argument.
      * @param name of system to return
-     * @return list of systems with name from argument
+     * @return system with name from argument
      */
-    public List<SystemEntity> getSystemByName(final String name) {
+    public SystemEntity getSystemByName(final String name) {
         Session session = getSession();
         Transaction tx = null;
         try {
@@ -43,14 +43,14 @@ public class SystemDaoImpl extends AbstructDaoImpl<SystemEntity>
             Query query = session.getNamedQuery("findByName");
             query.setParameter("name", name);
             @SuppressWarnings("unchecked")
-            List<SystemEntity> list = query.list();
+            SystemEntity system = (SystemEntity) query.getSingleResult();
             tx.commit();
-            return list;
+            return system;
         } catch (Exception e) {
             if (tx != null) {
                 tx.rollback();
             }
-            return null; //TODO throw exception
+            return null;
         } finally {
             session.close();
         }

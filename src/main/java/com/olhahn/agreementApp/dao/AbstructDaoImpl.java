@@ -67,7 +67,8 @@ public class AbstructDaoImpl<T> implements AbstructDao<T> {
     /**
      * Returns list of objects from DB.
      *
-     * @return list of all objects in table
+     * @return list of all objects in table,
+     * null if smth goes wrong
      */
      public List<T> getAll() {
          Session session = getSession();
@@ -86,7 +87,7 @@ public class AbstructDaoImpl<T> implements AbstructDao<T> {
              if (tx != null) {
                  tx.rollback();
              }
-             return null; //TODO throw exception
+             return null;
          } finally {
              session.close();
          }
@@ -96,8 +97,9 @@ public class AbstructDaoImpl<T> implements AbstructDao<T> {
      * Removes object from table in DB.
      *
      * @param id - id of the object to remove
+     * @return true if removed, false if error
      * */
-    public void removeObject(final int id) {
+    public boolean removeObject(final int id) {
         Session session = getSession();
         Transaction tx = null;
         try {
@@ -114,11 +116,12 @@ public class AbstructDaoImpl<T> implements AbstructDao<T> {
             }
             LOGGER.info("Object removed: " + objDescription);
             tx.commit();
+            return true;
         } catch (Exception e) {
             if (tx != null) {
                 tx.rollback();
             }
-            return; //TODO throw exception
+            return false;
         } finally {
             session.close();
         }
@@ -151,7 +154,7 @@ public class AbstructDaoImpl<T> implements AbstructDao<T> {
             if (tx != null) {
                 tx.rollback();
             }
-            return null; //TODO throw exception
+            return null;
         } finally {
             session.close();
         }
@@ -161,8 +164,9 @@ public class AbstructDaoImpl<T> implements AbstructDao<T> {
      * Updates object in DB.
      *
      * @param input - object to update
+     * @return true if all ok, false otherwise
      */
-    public void updateObject(final T input) {
+    public boolean updateObject(final T input) {
         Session session = getSession();
         Transaction tx = null;
         try {
@@ -170,11 +174,12 @@ public class AbstructDaoImpl<T> implements AbstructDao<T> {
             session.update(input);
             tx.commit();
             LOGGER.info("Object updated: " + input.toString());
+            return true;
         } catch (Exception e) {
             if (tx != null) {
                 tx.rollback();
             }
-            return; //TODO throw exception
+            return false;
         } finally {
             session.close();
         }
@@ -184,8 +189,9 @@ public class AbstructDaoImpl<T> implements AbstructDao<T> {
      * Adds object "input" into DB.
      *
      * @param input - object to add.
+     * @return true if all ok, false otherwise
      */
-    public void addObject(final T input) {
+    public boolean addObject(final T input) {
         Session session = getSession();
         Transaction tx = null;
         try {
@@ -193,11 +199,12 @@ public class AbstructDaoImpl<T> implements AbstructDao<T> {
             session.save(input);
             tx.commit();
             LOGGER.info("Object saved: " + input.toString());
+            return true;
         } catch (Exception e) {
             if (tx != null) {
                 tx.rollback();
             }
-            return; //TODO throw exception
+            return false;
         } finally {
             session.close();
         }
