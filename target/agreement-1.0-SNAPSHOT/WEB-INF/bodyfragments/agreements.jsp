@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="https://editor.datatables.net/extensions/Editor/css/editor.dataTables.min.css">
     <link rel="stylesheet" href="../../resources/css/agreement.css">
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
     <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/buttons/1.5.1/js/dataTables.buttons.min.js"></script>
     <script src="https://cdn.datatables.net/select/1.2.5/js/dataTables.select.min.js"></script>
@@ -144,7 +145,16 @@
             <button type="button" id="buttonDelete" class="btn btn-warning">
                 <span class="glyphicon glyphicon-minus-sign"></span> Usuń
             </button>
+
         </div>
+
+        <form style="margin: 5px" method="POST" enctype="multipart/form-data" action="${fileUploadAdress}" modelAttribute="file" >
+            <table>
+                <tr><td>Dodaj plik:</td><td><input type="file" name="file"/></td></tr>
+            </table>
+            <input type="submit" value="Dodaj plik" class="btn"/>
+        </form>
+
 
         <div>
             <table id="tableAgreements" class="table table-bordered table-striped">
@@ -302,6 +312,7 @@
             }
 
         });
+
 
         $(window).load(function() {
             $(this).callAjaxGetSystems();

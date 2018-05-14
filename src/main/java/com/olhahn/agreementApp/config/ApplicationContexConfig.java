@@ -12,7 +12,7 @@ import org.springframework.web.servlet.view.tiles3.TilesConfigurer;
 import org.springframework.web.servlet.view.tiles3.TilesView;
 
 /**
- * Project: agreement
+ * Project: agreement.
  *
  * @author Olha Hnatiuk on 4/30/18
  **/
