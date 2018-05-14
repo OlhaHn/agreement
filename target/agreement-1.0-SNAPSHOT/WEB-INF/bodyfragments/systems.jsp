@@ -73,6 +73,13 @@
             </button>
         </div>
 
+        <form style="margin: 5px" method="POST" enctype="multipart/form-data" action="/systemUpload" modelAttribute="file" >
+            <table>
+                <tr><td>Dodaj plik:</td><td><input type="file" name="file"/></td></tr>
+            </table>
+            <input type="submit" value="Dodaj plik" class="btn"/>
+        </form>
+
         <div>
             <table id="tableSystems" class="table table-bordered table-striped">
                 <thead>
