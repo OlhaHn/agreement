@@ -23,7 +23,6 @@
     <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/buttons/1.5.1/js/dataTables.buttons.min.js"></script>
     <script src="https://cdn.datatables.net/select/1.2.5/js/dataTables.select.min.js"></script>
-    <script src="https://editor.datatables.net/extensions/Editor/js/dataTables.editor.min.js"></script>
 
 </head>
 <div style="height: 100%; padding: 20px">
@@ -178,7 +177,10 @@
     </div>
 
 </div>
+
+
 <script>
+
 
     function resetForms() {
         document.forms['form1'].reset();
@@ -215,8 +217,8 @@
                     "searchable": false}
             ],
             "ajax": {
-                "url": "${getAgreements}",
                 "type": "POST",
+                "url": "${getAgreements}",
                 "success" :  function(data){
                     $.each(data, function(ind, obj){
 
@@ -391,7 +393,5 @@
         }
 
     });
-
-
 
 </script>

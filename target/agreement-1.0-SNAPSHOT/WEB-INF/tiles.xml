@@ -50,4 +50,8 @@
         <put-attribute name="body" value="/WEB-INF/bodyfragments/aboutApp.jsp" />
     </definition>
 
+    <definition name="login"  extends="base.definition">
+        <put-attribute name="body" value="/WEB-INF/bodyfragments/loginPage.jsp"/>
+    </definition>
+
 </tiles-definitions>

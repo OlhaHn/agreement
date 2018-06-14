@@ -29,6 +29,9 @@
         <li class="menu-li">
             <a class="menu-li-item" href="${pageContext.request.contextPath}/aboutApp">O aplikacji</a>
         </li>
+        <li class="menu-li">
+            <a class="menu-li-item" href="${pageContext.request.contextPath}/logout">Wyloguj</a>
+        </li>
 
     </ul>
 
